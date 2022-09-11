@@ -16,9 +16,21 @@ Examples:
 str1 = 'Angela T: wrote about Spiderman, Miah B: no Spiderman, Adrian R: wrote about Spiderman'
 str2 = 'Tom B: no Spiderman, Justin N: no Spiderman, Emily B: wrote about Spiderman'
 ***********************************************************************/
+// create empty object
+// split the string on ", "
+// filter the string based on arrays elements that includes "no Spiderman"
+// split the string on ": "
+// filter the array to only include names
+// iterate the array adding name and 'no Spiderman' to object
 
 const spiderManWriters = (str) => {
-    // Your code here
+    let obj = {};
+    let noSpiderman = str.split(", ").filter((ele) => ele.toLowerCase().includes('no spiderman')).map((ele) => ele.slice(0, ele.indexOf(':')))
+    // let names = noSpiderman.map((ele) => ele.slice(0, ele.indexOf(':')))
+    for (let name of noSpiderman){
+        obj[name] = "no Spiderman";
+    }
+    return obj;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -28,7 +28,9 @@ newDice3(2); // 24
 ***********************************************************************/
 
 const dynamicDice = sides => {
-  // Your code here
+  return function(num){
+    return num * sides;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

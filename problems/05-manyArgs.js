@@ -20,9 +20,7 @@ manyArgs(1, 2, 5, 6) // 60
 
 ***********************************************************************/
 
-const manyArgs = (...args) => {
-    // Your code here
-}
+const manyArgs = (...args) => args.reduce((acc, num) => acc * num);
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try{

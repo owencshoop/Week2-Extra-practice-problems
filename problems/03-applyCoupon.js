@@ -25,10 +25,19 @@ wishList = [
 console.log(applyCoupon(10, wishList)); // => 88.2;
 console.log(applyCoupon(20, wishList)); // => 78.4;
 
+// interate through the wishlist
+// create a blank array
+// for each ele.price, add it to the array
+// map the prices array with a discount for each price with price - (price/discount)
+// reduce the mapped arraw to add each discount price
+// return the new price
 *******************************************************************************/
 
 const applyCoupon = (discount, wishList) => {
-    // Your code here
+    let prices = [];
+    wishList.forEach(ele => prices.push(ele.price));
+    let discounted = prices.map((price) => (price - (price * (discount/100))));
+    return discounted.reduce((acc, num) => acc + num);
 }
 
 /*****************DO NOT MODIFY ANYTHING UNDER THIS LINE**********************/
